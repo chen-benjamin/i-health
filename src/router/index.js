@@ -7,6 +7,14 @@ import Reservation from '../views/Reservation.vue'
 import Diet from '../views/Diet.vue'
 import Exercise from '../views/Exercise.vue'
 import Status from '../views/Status.vue'
+import Analysis from '../views/Analysis.vue'
+import BloodPressure from '../views/BloodPressure.vue'
+import HeartRate from '../views/HeartRate.vue'
+import Temperature from '../views/Temperature.vue'
+import SleepCycle from '../views/SleepCycle.vue'
+import Risks from '../views/Risks.vue'
+
+
 
 Vue.use(Router);
 
@@ -18,6 +26,12 @@ export default new Router({
     { path: '/reservation', component: Reservation },
     { path: '/diet', component: Diet },
     { path: '/exercise', component: Exercise },
-    { path: '/status', component: Status }
+    { path: '/status', component: Status },
+    { path: '/analysis', component: Analysis },
+    { path: '/bloodpressure', component: BloodPressure },
+    { path: '/heartrate', component: HeartRate },
+    { path: '/temperature', component: Temperature },
+    { path: '/sleepcycle', component: SleepCycle },
+    { path: '/risks', component: Risks }
   ]
 });
