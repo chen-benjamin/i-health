@@ -11,8 +11,20 @@
     </div>
     <button @click="toggleH1">hi</button>
     <b-form-group label="Individual radios" v-slot="{ ariaDescribedby }">
-      <b-form-radio v-model="isActive" :aria-describedby="ariaDescribedby" name="some-radios" value="true">Option A</b-form-radio>
-      <b-form-radio v-model="isActive" :aria-describedby="ariaDescribedby" name="some-radios" value="false">Option B</b-form-radio>
+      <b-form-radio
+        v-model="isActive"
+        :aria-describedby="ariaDescribedby"
+        name="some-radios"
+        value="true"
+        >Option A</b-form-radio
+      >
+      <b-form-radio
+        v-model="isActive"
+        :aria-describedby="ariaDescribedby"
+        name="some-radios"
+        value="false"
+        >Option B</b-form-radio
+      >
     </b-form-group>
     <h1 v-if="isActive === 'true'">If statement demo</h1>
     <b-button-group>
@@ -21,7 +33,9 @@
       <b-button @click="filterFood('Fats')">Fats</b-button>
     </b-button-group>
     <b-list-group v-if="selected.length > 0">
-      <b-list-group-item v-for="food, index in selected" :key="index">{{ food.foodName }}</b-list-group-item>
+      <b-list-group-item v-for="(food, index) in selected" :key="index">{{
+        food.foodName
+      }}</b-list-group-item>
     </b-list-group>
   </div>
 </template>
@@ -99,13 +113,13 @@ export default {
   },
   methods: {
     filterFood(type) {
-      this.selected = this.foods.filter(food => {
-        return food.nutrient == type
-      })
+      this.selected = this.foods.filter((food) => {
+        return food.nutrient == type;
+      });
     },
     toggleH1() {
-      console.log(typeof(this.isActive))
-    }
-  }
+      console.log(typeof this.isActive);
+    },
+  },
 };
 </script>
