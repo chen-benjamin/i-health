@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <Narbar></Narbar>
+    <div class="bot-nav">
+      <Narbar></Narbar>
+    </div>
   </div>
 </template>
 
@@ -23,5 +25,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+.bot-nav {
+  height: 100px;
 }
 </style>
