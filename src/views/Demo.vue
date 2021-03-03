@@ -9,7 +9,12 @@
         <b-button variant="primary" href="#">More Info</b-button>
       </b-jumbotron>
     </div>
-    <h1 v-if="isActive">If statement demo</h1>
+    <button @click="toggleH1">hi</button>
+    <b-form-group label="Individual radios" v-slot="{ ariaDescribedby }">
+      <b-form-radio v-model="isActive" :aria-describedby="ariaDescribedby" name="some-radios" value="true">Option A</b-form-radio>
+      <b-form-radio v-model="isActive" :aria-describedby="ariaDescribedby" name="some-radios" value="false">Option B</b-form-radio>
+    </b-form-group>
+    <h1 v-if="isActive === 'true'">If statement demo</h1>
     <b-button-group>
       <b-button @click="filterFood('Protein')">Protein</b-button>
       <b-button @click="filterFood('Carbohydrates')">Carbohydrates</b-button>
@@ -26,7 +31,7 @@ export default {
   name: "Demo",
   data() {
     return {
-      isActive: true,
+      isActive: null,
       selected: [],
       foods: [
         {
@@ -97,6 +102,9 @@ export default {
       this.selected = this.foods.filter(food => {
         return food.nutrient == type
       })
+    },
+    toggleH1() {
+      console.log(typeof(this.isActive))
     }
   }
 };
