@@ -13,8 +13,8 @@ import HeartRate from '../views/HeartRate.vue'
 import Temperature from '../views/Temperature.vue'
 import SleepCycle from '../views/SleepCycle.vue'
 import Risks from '../views/Risks.vue'
-import exercisein from '../views/exerciseSub/exercisein.vue'
-import exerciseout from '../views/exerciseSub/exerciseout.vue'
+import exercisein from '../views/exercisein.vue'
+import exerciseout from '../views/exerciseout.vue'
 
 
 

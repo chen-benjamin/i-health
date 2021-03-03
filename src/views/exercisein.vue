@@ -17,23 +17,32 @@
         accordion="my-accordion"
         role="tabpanel"
       >
-        <b-card-body>
-          <b-img :src="exercise.images" fluid alt="Responsive image"></b-img>
-          <b-card-text>{{ exercise.intro }}</b-card-text>
-          <b-card-text>{{ exercise.benefitsIntro }}</b-card-text>
-          <ul class="text-left">
-            <li v-for="(benefit, index) in exercise.benefits" :key="index">
-              {{ benefit }}
-            </li>
-          </ul>
-          <b-card-text>{{ exercise.tips }}</b-card-text>
-          <iframe
-            fluid alt="Responsive image"
-            :src="exercise.video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+        <b-card-body class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 mx-auto">
+              <b-img
+                :src="exercise.images"
+                fluid
+                alt="Responsive image"
+              ></b-img>
+              <b-card-text>{{ exercise.intro }}</b-card-text>
+              <b-card-text>{{ exercise.benefitsIntro }}</b-card-text>
+              <ul class="text-left">
+                <li v-for="(benefit, index) in exercise.benefits" :key="index">
+                  {{ benefit }}
+                </li>
+              </ul>
+              <b-card-text>{{ exercise.tips }}</b-card-text>
+              <iframe
+                fluid
+                alt="Responsive image"
+                :src="exercise.video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </b-card-body>
       </b-collapse>
     </b-card>
@@ -131,5 +140,8 @@ export default {
 <style>
 .text {
   text-align: left;
+}
+img {
+  width: 100%;
 }
 </style>
