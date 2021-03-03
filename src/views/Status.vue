@@ -99,7 +99,7 @@
 export default {
   name: 'Status',
   mounted: function() {
-    this.intervalId = setInterval(() => this.random(), 1000);
+    this.intervalId = setInterval(() => this.random(), 10000);
   },
   beforeDestroy: function() {
     clearInterval(this.intervalId)
@@ -119,7 +119,7 @@ export default {
       this.heartRate = 70 + Math.floor(Math.random() * 10)
       this.bpH = 100 + Math.floor(Math.random() * 10)
       this.bpL = 65 + Math.floor(Math.random() * 10)
-      this.temperature = 36 + Math.floor(Math.random())
+      this.temperature = 36 + Math.random()
       this.steps++
     }
   }
