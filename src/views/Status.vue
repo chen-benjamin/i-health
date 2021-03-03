@@ -119,7 +119,7 @@ export default {
       this.heartRate = 70 + Math.floor(Math.random() * 10)
       this.bpH = 100 + Math.floor(Math.random() * 10)
       this.bpL = 65 + Math.floor(Math.random() * 10)
-      this.temperature = 36 + Math.random().toFixed(1)
+      this.temperature = (36 + Math.random()).toFixed(1)
       this.steps++
     }
   }
