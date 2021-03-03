@@ -82,7 +82,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 .main-section {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
