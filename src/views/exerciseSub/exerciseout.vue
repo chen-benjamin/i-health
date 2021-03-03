@@ -18,24 +18,19 @@
         accordion="my-accordion"
         role="tabpanel"
       >
-        <b-card-body class="main-section">
-          <div></div>
-          <div>
+        <b-card-body>
           <b-img :src="exercise.images" alt="Responsive image"></b-img>
           <b-card-text>{{ exercise.intro }}</b-card-text>
           <b-card-text>{{ exercise.benefitsIntro }}</b-card-text>
           <ul class="text-left"><li v-for="(benefit,index) in exercise.benefits" :key="index">{{benefit}}</li></ul>
           <b-card-text>{{ exercise.tips }}</b-card-text>
           <iframe
-            width="560"
-            height="315"
+            fluid alt="Responsive image"
             :src="exercise.video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-          </div>
-          <div></div>
         </b-card-body>
       </b-collapse>
     </b-card>
