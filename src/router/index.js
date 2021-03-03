@@ -13,25 +13,29 @@ import HeartRate from '../views/HeartRate.vue'
 import Temperature from '../views/Temperature.vue'
 import SleepCycle from '../views/SleepCycle.vue'
 import Risks from '../views/Risks.vue'
+import exercisein from '../views/exerciseSub/exercisein.vue'
+import exerciseout from '../views/exerciseSub/exerciseout.vue'
 
 
 
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    { path: '/', component: Home },
-    { path: '/demo', component: Demo },
-    { path: '/health-risk', component: HealthRisk },
-    { path: '/reservation', component: Reservation },
-    { path: '/diet', component: Diet },
-    { path: '/exercise', component: Exercise },
-    { path: '/status', component: Status },
-    { path: '/analysis', component: Analysis },
-    { path: '/bloodpressure', component: BloodPressure },
-    { path: '/heartrate', component: HeartRate },
-    { path: '/temperature', component: Temperature },
-    { path: '/sleepcycle', component: SleepCycle },
-    { path: '/risks', component: Risks }
-  ]
+    routes: [
+        { path: '/', component: Home },
+        { path: '/demo', component: Demo },
+        { path: '/health-risk', component: HealthRisk },
+        { path: '/reservation', component: Reservation },
+        { path: '/diet', component: Diet },
+        { path: '/exercise', component: Exercise },
+        { path: '/status', component: Status },
+        { path: '/analysis', component: Analysis },
+        { path: '/bloodpressure', component: BloodPressure },
+        { path: '/heartrate', component: HeartRate },
+        { path: '/temperature', component: Temperature },
+        { path: '/sleepcycle', component: SleepCycle },
+        { path: '/risks', component: Risks },
+        { path: '/exercisein', component: exercisein },
+        { path: '/exerciseout', component: exerciseout }
+    ]
 });
