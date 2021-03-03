@@ -17,9 +17,8 @@
         accordion="my-accordion"
         role="tabpanel"
       >
-        <b-card-body class="main-section">
-          <div></div>
-          <div><b-img :src="exercise.images" fluid alt="Responsive image"></b-img>
+        <b-card-body>
+          <b-img :src="exercise.images" fluid alt="Responsive image"></b-img>
           <b-card-text>{{ exercise.intro }}</b-card-text>
           <b-card-text>{{ exercise.benefitsIntro }}</b-card-text>
           <ul class="text-left">
@@ -29,15 +28,12 @@
           </ul>
           <b-card-text>{{ exercise.tips }}</b-card-text>
           <iframe
-            width="560"
-            height="315"
+            fluid alt="Responsive image"
             :src="exercise.video"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe></div>
-          <div></div>
-          
+          ></iframe>
         </b-card-body>
       </b-collapse>
     </b-card>
@@ -135,9 +131,5 @@ export default {
 <style>
 .text {
   text-align: left;
-}
-.main-section{
-  display:grid;
-  grid-template-columns: 1fr 2fr 1fr;
 }
 </style>
