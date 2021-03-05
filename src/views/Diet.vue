@@ -1,36 +1,29 @@
 <template>
   <div id="diet">
-    <div class="diet">
-      <div class="col-12 col-md-6 mx-auto">
-        <h1 v-if="isActive">Diet Suggestion</h1>
-        <b-button-group>
-          <b-button variant="primary" @click="filterFood('Protein')"
-            >Protein</b-button
-          >
-          <b-button variant="dark" @click="filterFood('Carbohydrates')"
-            >Carbohydrates</b-button
-          >
-          <b-button variant="warning" @click="filterFood('Fats')"
-            >Fats</b-button
-          >
-          <b-button variant="info" @click="filterFood('Vitamins')"
-            >Vitamins</b-button
-          >
-          <b-button variant="danger" @click="filterFood('Minerals')"
-            >Minerals</b-button
-          >
-          <b-button variant="secondary" @click="filterFood('Water')"
-            >Water</b-button
-          >
-        </b-button-group>
-        <b-list-group v-if="selected.length > 0">
-          <b-list-group-item v-for="(food, index) in selected" :key="index">{{
-            food.foodName
-          }}</b-list-group-item>
-        </b-list-group>
-      </div>
+    <h1 v-if="isActive">Diet Suggestion</h1>
+    <div>
+      <b-button block variant="primary" @click="filterFood('Protein')"
+        >Protein</b-button
+      >
+      <b-button block variant="dark" @click="filterFood('Carbohydrates')"
+        >Carbohydrates</b-button
+      >
+      <b-button block variant="warning" @click="filterFood('Fats')">Fats</b-button>
+      <b-button block variant="info" @click="filterFood('Vitamins')"
+        >Vitamins</b-button
+      >
+      <b-button block variant="danger" @click="filterFood('Minerals')"
+        >Minerals</b-button
+      >
+      <b-button block variant="secondary" @click="filterFood('Water')"
+        >Water</b-button
+      >
     </div>
-    <!-- </b-container> -->
+    <b-list-group v-if="selected.length > 0">
+      <b-list-group-item v-for="(food, index) in selected" :key="index">{{
+        food.foodName
+      }}</b-list-group-item>
+    </b-list-group>
   </div>
 </template>
 
@@ -115,8 +108,9 @@ export default {
 };
 </script>
 <style scoped>
-.diet {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+h1 {
+  margin: 20px;
+  font-size: 1.8rem;
+  color: #070c51;
 }
 </style>
