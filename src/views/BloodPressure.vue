@@ -6,7 +6,7 @@
         <div class="col-12">
           <b-card
             title="Sample Blood Pressure Graph"
-            img-src="/images/line-graph4.jpg"
+            img-src="/images/line-graph.jpg"
             img-alt="Image"
             img-top
             tag="article"

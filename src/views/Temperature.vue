@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-12">
           <b-card
-            title="Sample Blood Pressure Graph"
+            title="Sample Temperature Graph"
             img-src="/images/line-graph3.png"
             img-alt="Image"
             img-top

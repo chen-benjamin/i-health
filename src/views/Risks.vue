@@ -49,6 +49,7 @@
           >
         </b-card>
       </b-card-group>
+      <br>
       <div>
         <b-button block variant="secondary" href="/#/reservation" size="lg"
           >Book An Appointment</b-button

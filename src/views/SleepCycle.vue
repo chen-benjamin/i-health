@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-12">
           <b-card
-            title="Sample Blood Pressure Graph"
+            title="Sample Sleep Cycle Graph"
             img-src="/images/line-graph3.png"
             img-alt="Image"
             img-top
